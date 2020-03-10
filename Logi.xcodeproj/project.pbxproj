@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64B810F02417F38900121044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B810EF2417F38900121044 /* AppDelegate.swift */; };
+		64B810F22417F38900121044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B810F12417F38900121044 /* SceneDelegate.swift */; };
+		64B810F42417F38900121044 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B810F32417F38900121044 /* ContentView.swift */; };
+		64B810F62417F38A00121044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B810F52417F38A00121044 /* Assets.xcassets */; };
+		64B810F92417F38A00121044 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B810F82417F38A00121044 /* Preview Assets.xcassets */; };
+		64B810FC2417F38A00121044 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B810FA2417F38A00121044 /* LaunchScreen.storyboard */; };
+		64B811072417F38A00121044 /* LogiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B811062417F38A00121044 /* LogiTests.swift */; };
+		64B811122417F38A00121044 /* LogiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B811112417F38A00121044 /* LogiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64B811032417F38A00121044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64B810E42417F38900121044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64B810EB2417F38900121044;
+			remoteInfo = Logi;
+		};
+		64B8110E2417F38A00121044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64B810E42417F38900121044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64B810EB2417F38900121044;
+			remoteInfo = Logi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64B810EC2417F38900121044 /* Logi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B810EF2417F38900121044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		64B810F12417F38900121044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		64B810F32417F38900121044 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		64B810F52417F38A00121044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64B810F82417F38A00121044 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64B810FB2417F38A00121044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64B810FD2417F38A00121044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64B811022417F38A00121044 /* LogiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B811062417F38A00121044 /* LogiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogiTests.swift; sourceTree = "<group>"; };
+		64B811082417F38A00121044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64B8110D2417F38A00121044 /* LogiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B811112417F38A00121044 /* LogiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogiUITests.swift; sourceTree = "<group>"; };
+		64B811132417F38A00121044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64B810E92417F38900121044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B810FF2417F38A00121044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B8110A2417F38A00121044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64B810E32417F38900121044 = {
+			isa = PBXGroup;
+			children = (
+				64B810EE2417F38900121044 /* Logi */,
+				64B811052417F38A00121044 /* LogiTests */,
+				64B811102417F38A00121044 /* LogiUITests */,
+				64B810ED2417F38900121044 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64B810ED2417F38900121044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64B810EC2417F38900121044 /* Logi.app */,
+				64B811022417F38A00121044 /* LogiTests.xctest */,
+				64B8110D2417F38A00121044 /* LogiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64B810EE2417F38900121044 /* Logi */ = {
+			isa = PBXGroup;
+			children = (
+				64B810EF2417F38900121044 /* AppDelegate.swift */,
+				64B810F12417F38900121044 /* SceneDelegate.swift */,
+				64B810F32417F38900121044 /* ContentView.swift */,
+				64B810F52417F38A00121044 /* Assets.xcassets */,
+				64B810FA2417F38A00121044 /* LaunchScreen.storyboard */,
+				64B810FD2417F38A00121044 /* Info.plist */,
+				64B810F72417F38A00121044 /* Preview Content */,
+			);
+			path = Logi;
+			sourceTree = "<group>";
+		};
+		64B810F72417F38A00121044 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				64B810F82417F38A00121044 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64B811052417F38A00121044 /* LogiTests */ = {
+			isa = PBXGroup;
+			children = (
+				64B811062417F38A00121044 /* LogiTests.swift */,
+				64B811082417F38A00121044 /* Info.plist */,
+			);
+			path = LogiTests;
+			sourceTree = "<group>";
+		};
+		64B811102417F38A00121044 /* LogiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				64B811112417F38A00121044 /* LogiUITests.swift */,
+				64B811132417F38A00121044 /* Info.plist */,
+			);
+			path = LogiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64B810EB2417F38900121044 /* Logi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64B811162417F38A00121044 /* Build configuration list for PBXNativeTarget "Logi" */;
+			buildPhases = (
+				64B810E82417F38900121044 /* Sources */,
+				64B810E92417F38900121044 /* Frameworks */,
+				64B810EA2417F38900121044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Logi;
+			productName = Logi;
+			productReference = 64B810EC2417F38900121044 /* Logi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64B811012417F38A00121044 /* LogiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64B811192417F38A00121044 /* Build configuration list for PBXNativeTarget "LogiTests" */;
+			buildPhases = (
+				64B810FE2417F38A00121044 /* Sources */,
+				64B810FF2417F38A00121044 /* Frameworks */,
+				64B811002417F38A00121044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64B811042417F38A00121044 /* PBXTargetDependency */,
+			);
+			name = LogiTests;
+			productName = LogiTests;
+			productReference = 64B811022417F38A00121044 /* LogiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64B8110C2417F38A00121044 /* LogiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64B8111C2417F38A00121044 /* Build configuration list for PBXNativeTarget "LogiUITests" */;
+			buildPhases = (
+				64B811092417F38A00121044 /* Sources */,
+				64B8110A2417F38A00121044 /* Frameworks */,
+				64B8110B2417F38A00121044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64B8110F2417F38A00121044 /* PBXTargetDependency */,
+			);
+			name = LogiUITests;
+			productName = LogiUITests;
+			productReference = 64B8110D2417F38A00121044 /* LogiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64B810E42417F38900121044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Manuel;
+				TargetAttributes = {
+					64B810EB2417F38900121044 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					64B811012417F38A00121044 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 64B810EB2417F38900121044;
+					};
+					64B8110C2417F38A00121044 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 64B810EB2417F38900121044;
+					};
+				};
+			};
+			buildConfigurationList = 64B810E72417F38900121044 /* Build configuration list for PBXProject "Logi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64B810E32417F38900121044;
+			productRefGroup = 64B810ED2417F38900121044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64B810EB2417F38900121044 /* Logi */,
+				64B811012417F38A00121044 /* LogiTests */,
+				64B8110C2417F38A00121044 /* LogiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64B810EA2417F38900121044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B810FC2417F38A00121044 /* LaunchScreen.storyboard in Resources */,
+				64B810F92417F38A00121044 /* Preview Assets.xcassets in Resources */,
+				64B810F62417F38A00121044 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B811002417F38A00121044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B8110B2417F38A00121044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64B810E82417F38900121044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B810F02417F38900121044 /* AppDelegate.swift in Sources */,
+				64B810F22417F38900121044 /* SceneDelegate.swift in Sources */,
+				64B810F42417F38900121044 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B810FE2417F38A00121044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B811072417F38A00121044 /* LogiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B811092417F38A00121044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B811122417F38A00121044 /* LogiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64B811042417F38A00121044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64B810EB2417F38900121044 /* Logi */;
+			targetProxy = 64B811032417F38A00121044 /* PBXContainerItemProxy */;
+		};
+		64B8110F2417F38A00121044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64B810EB2417F38900121044 /* Logi */;
+			targetProxy = 64B8110E2417F38A00121044 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64B810FA2417F38A00121044 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64B810FB2417F38A00121044 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64B811142417F38A00121044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		64B811152417F38A00121044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64B811172417F38A00121044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Logi/Preview Content\"";
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Logi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.Logi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64B811182417F38A00121044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Logi/Preview Content\"";
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Logi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.Logi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		64B8111A2417F38A00121044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				INFOPLIST_FILE = LogiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.LogiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Logi.app/Logi";
+			};
+			name = Debug;
+		};
+		64B8111B2417F38A00121044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				INFOPLIST_FILE = LogiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.LogiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Logi.app/Logi";
+			};
+			name = Release;
+		};
+		64B8111D2417F38A00121044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				INFOPLIST_FILE = LogiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.LogiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Logi;
+			};
+			name = Debug;
+		};
+		64B8111E2417F38A00121044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5VYZ9C6Z4Q;
+				INFOPLIST_FILE = LogiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuel.miapp.LogiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Logi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64B810E72417F38900121044 /* Build configuration list for PBXProject "Logi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B811142417F38A00121044 /* Debug */,
+				64B811152417F38A00121044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64B811162417F38A00121044 /* Build configuration list for PBXNativeTarget "Logi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B811172417F38A00121044 /* Debug */,
+				64B811182417F38A00121044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64B811192417F38A00121044 /* Build configuration list for PBXNativeTarget "LogiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B8111A2417F38A00121044 /* Debug */,
+				64B8111B2417F38A00121044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64B8111C2417F38A00121044 /* Build configuration list for PBXNativeTarget "LogiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B8111D2417F38A00121044 /* Debug */,
+				64B8111E2417F38A00121044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64B810E42417F38900121044 /* Project object */;
+}
