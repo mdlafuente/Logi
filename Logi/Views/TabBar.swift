@@ -32,6 +32,7 @@ struct TabBar: View {
             }
                 
         .edgesIgnoringSafeArea(.top)
+            
         }
     }
 

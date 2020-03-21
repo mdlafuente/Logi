@@ -13,11 +13,9 @@ struct HomeView: View {
     @State var showAccount = false
     
     var body: some View {
-        
-    
         ZStack {
             Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
-            .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
             
             ScrollView {
                 VStack {
@@ -30,8 +28,7 @@ struct HomeView: View {
                             .cornerRadius(15.0)
                             .modifier(ShadowModifier())
                     }
-                    }
-                    
+                }
                     
                 HStack {
                     VStack {
@@ -46,22 +43,23 @@ struct HomeView: View {
                             .modifier(ShadowModifier())
                     }
                 }
-                    Spacer()
-                    
-                    VStack {
-                        HStack {
-                            Text("Top Destinations")
-                                .font(.system(size: 28, weight: .bold))
-                                .multilineTextAlignment(.leading)
-                                .frame(width: 350, height: 20, alignment: .leading)
-                                .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
-                        }
-                    
-                        TopDestinations()
-                         
-                    }
-            
                 
+                Spacer()
+                    
+                VStack {
+                    HStack {
+                        Text("Top Destinations")
+                            .font(.system(size: 28, weight: .bold))
+                            .multilineTextAlignment(.leading)
+                            .frame(width: 350, height: 20, alignment:
+                                .leading)
+                            .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
+                    }
+                    
+                    TopDestinations()
+                         
+                }
+            
                 HStack {
                     Text("Adventures")
                         .font(.system(size: 28, weight: .bold))
@@ -70,26 +68,26 @@ struct HomeView: View {
                         .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                 }
                 
-                    Adventures()
+                Adventures()
                     
-                    HStack {
-                        VStack {
-                            Text("On the job")
-                                .font(.system(size: 28, weight: .bold))
-                                .multilineTextAlignment(.leading)
-                                .frame(width: 350, height: 20, alignment: .leading)
-                                .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
-                            Text("Boost your business trip")
-                                .font(.headline)
-                                .foregroundColor(.secondary)
-                                .multilineTextAlignment(.leading)
-                                .frame(width: 350, height: 20, alignment: .leading)
-                                .padding((.init(top: 10, leading: 15, bottom: 5, trailing: 30)))
+                HStack {
+                    VStack {
+                        Text("On the job")
+                            .font(.system(size: 28, weight: .bold))
+                            .multilineTextAlignment(.leading)
+                            .frame(width: 350, height: 20, alignment: .leading)
+                            .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
+                        Text("Boost your business trip")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.leading)
+                            .frame(width: 350, height: 20, alignment: .leading)
+                            .padding((.init(top: 10, leading: 15, bottom: 5, trailing: 30)))
                             
-                        }
                     }
+                }
                     
-                    OnTheJob()
+                OnTheJob()
             }
         }
     }

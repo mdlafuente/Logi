@@ -28,11 +28,12 @@
 		64C104B124195DCF00982E0E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B024195DCF00982E0E /* CardView.swift */; };
 		64C104B32419B98400982E0E /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B22419B98400982E0E /* CardList.swift */; };
 		64DF86F424212C2600938143 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF86F324212C2600938143 /* AccountView.swift */; };
-		64DF86F624212DDE00938143 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF86F524212DDE00938143 /* BlurView.swift */; };
 		64DFFF052425E374004B3C42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DFFF042425E374004B3C42 /* GoogleService-Info.plist */; };
 		64DFFF082425E697004B3C42 /* Adventures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF072425E697004B3C42 /* Adventures.swift */; };
 		64DFFF0A2425E85C004B3C42 /* OnTheJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF092425E85C004B3C42 /* OnTheJob.swift */; };
 		64DFFF0C2425E8FE004B3C42 /* TopDestinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF0B2425E8FE004B3C42 /* TopDestinations.swift */; };
+		64DFFF102425F29D004B3C42 /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF0F2425F29D004B3C42 /* AccountRow.swift */; };
+		64DFFF122425F635004B3C42 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF112425F633004B3C42 /* BlurView.swift */; };
 		6E36E2EA0FCCA62EB6B52EB2 /* Pods_LogiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A683156B6AF98B9167F4F416 /* Pods_LogiTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,11 +83,12 @@
 		64C104B024195DCF00982E0E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		64C104B22419B98400982E0E /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		64DF86F324212C2600938143 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		64DF86F524212DDE00938143 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		64DFFF042425E374004B3C42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64DFFF072425E697004B3C42 /* Adventures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventures.swift; sourceTree = "<group>"; };
 		64DFFF092425E85C004B3C42 /* OnTheJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheJob.swift; sourceTree = "<group>"; };
 		64DFFF0B2425E8FE004B3C42 /* TopDestinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDestinations.swift; sourceTree = "<group>"; };
+		64DFFF0F2425F29D004B3C42 /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		64DFFF112425F633004B3C42 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		85D10CD10FF89C8E341ECA1F /* Pods-LogiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogiTests.release.xcconfig"; path = "Target Support Files/Pods-LogiTests/Pods-LogiTests.release.xcconfig"; sourceTree = "<group>"; };
 		870A72402D31C0BF9BD9E912 /* Pods-Logi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logi.debug.xcconfig"; path = "Target Support Files/Pods-Logi/Pods-Logi.debug.xcconfig"; sourceTree = "<group>"; };
 		A683156B6AF98B9167F4F416 /* Pods_LogiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,15 +128,12 @@
 		649D78CF2424643100F147D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				64DFFF062425E662004B3C42 /* Home */,
-				64C104B024195DCF00982E0E /* CardView.swift */,
-				64C104B22419B98400982E0E /* CardList.swift */,
-				64C104AE24180D1200982E0E /* CardDetail.swift */,
 				64B8111F2417F3F900121044 /* LoginView.swift */,
-				64DF86F324212C2600938143 /* AccountView.swift */,
-				64DF86F524212DDE00938143 /* BlurView.swift */,
 				649D78D12424672E00F147D8 /* TabBar.swift */,
 				64B811212417F41600121044 /* Modifiers.swift */,
+				64DFFF0D2425EF4C004B3C42 /* Cards */,
+				64DFFF062425E662004B3C42 /* Home */,
+				64DFFF0E2425F261004B3C42 /* Account */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +222,26 @@
 				64DFFF092425E85C004B3C42 /* OnTheJob.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		64DFFF0D2425EF4C004B3C42 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				64C104B024195DCF00982E0E /* CardView.swift */,
+				64C104B22419B98400982E0E /* CardList.swift */,
+				64C104AE24180D1200982E0E /* CardDetail.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		64DFFF0E2425F261004B3C42 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				64DF86F324212C2600938143 /* AccountView.swift */,
+				64DFFF0F2425F29D004B3C42 /* AccountRow.swift */,
+				64DFFF112425F633004B3C42 /* BlurView.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		75535C000A0094795E98F0DE /* Pods */ = {
@@ -493,7 +512,6 @@
 				64B810F02417F38900121044 /* AppDelegate.swift in Sources */,
 				64B810F22417F38900121044 /* SceneDelegate.swift in Sources */,
 				64B811202417F3F900121044 /* LoginView.swift in Sources */,
-				64DF86F624212DDE00938143 /* BlurView.swift in Sources */,
 				649D78D62424696700F147D8 /* Inmueble.swift in Sources */,
 				649D78D4242468D700F147D8 /* Usuario .swift in Sources */,
 				64DF86F424212C2600938143 /* AccountView.swift in Sources */,
@@ -505,6 +523,8 @@
 				64DFFF082425E697004B3C42 /* Adventures.swift in Sources */,
 				649D78D22424672E00F147D8 /* TabBar.swift in Sources */,
 				649056662417F71B00B91A98 /* HomeView.swift in Sources */,
+				64DFFF122425F635004B3C42 /* BlurView.swift in Sources */,
+				64DFFF102425F29D004B3C42 /* AccountRow.swift in Sources */,
 				64B811222417F41600121044 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +680,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};

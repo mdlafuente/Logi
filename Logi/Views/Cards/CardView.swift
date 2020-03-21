@@ -51,9 +51,7 @@ struct CardView: View {
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
- // Revisar sombra
-                
-        .modifier(ShadowModifier())
+                .modifier(ShadowModifier())
             
         )
         .padding([.top, .horizontal])
@@ -64,5 +62,5 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(image: "casaSm1", location: "San Miguel de Allende", name: "Casa Román", capacity: "8 - 10 personas")
     
-        }
     }
+}

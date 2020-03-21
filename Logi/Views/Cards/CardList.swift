@@ -28,22 +28,22 @@ struct CardList: View {
                         
                     CardView(image: "casaPv1", location: "Puerto Vallarta, México.", name: "Casa Arenas", capacity: "10 - 12 personas")
                         .onTapGesture {
-                        self.showDetail.toggle()
+                            self.showDetail.toggle()
                         }
                         
                     CardView(image: "dptoCdmx1", location: "Colonia Roma, CDMX", name: "Torre Aura", capacity: "1 - 3 personas")
                         .onTapGesture {
-                        self.showDetail.toggle()
+                            self.showDetail.toggle()
                         }
                         
                     CardView(image: "casaCa1", location: "Onatrio, Canadá.", name: "Oak Trail Woods", capacity: "4 - 7 personas")
                         .onTapGesture {
-                        self.showDetail.toggle()
+                            self.showDetail.toggle()
                         }
                     
                     CardView(image: "dptoSf1", location: "SunnyVale, CA.", name: "Kifer Rd.", capacity: "2 - 4 personas")
                         .onTapGesture {
-                        self.showDetail.toggle()
+                            self.showDetail.toggle()
                         }
                 }
             }
@@ -52,12 +52,11 @@ struct CardList: View {
                 .offset(y: showDetail ? 0 : screen.height)
                 .animation(.default)
         }
-            
     }
 }
 
 struct CardList_Previews: PreviewProvider {
     static var previews: some View {
         CardList() 
-        }
     }
+}

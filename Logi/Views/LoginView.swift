@@ -14,30 +14,13 @@ struct LoginView: View {
     @State private var password = ""
     
     var body: some View {
-        ZStack {
-            Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
-            .edgesIgnoringSafeArea(.all)
             
-            Login()
-            }
-        }
-    }
-
-// F19333
-
-struct Login: View {
-    @State private var email = ""
-    @State private var password = ""
-      
-    var body: some View {
         VStack(alignment: .center, spacing: 15) {
             Text("¡ Bienvenido a Logi !")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .padding([.top, .bottom], 30.0)
-            
-        
             
             TextField("Email", text: self.$email)
                 .frame(width: 350, height: 20)
@@ -71,14 +54,17 @@ struct Login: View {
                     .modifier(ShadowModifier())
                 
             }
-            
+        
             Spacer()
+            
         }
     }
 }
 
+
+
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        Login()
+        LoginView()
     }
 }
