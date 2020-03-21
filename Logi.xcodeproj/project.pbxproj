@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23B329A4A878557E83644FF0 /* Pods_Logi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8C452F61E0DC698E781BE0 /* Pods_Logi.framework */; };
 		317DAA4EADC824643A49DB5B /* Pods_Logi_LogiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260448F17310098D4277F18B /* Pods_Logi_LogiUITests.framework */; };
+		6441839124268A8600175A13 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839024268A8600175A13 /* ProfileView.swift */; };
 		649056662417F71B00B91A98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649056652417F71B00B91A98 /* HomeView.swift */; };
 		649D78D22424672E00F147D8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D12424672E00F147D8 /* TabBar.swift */; };
 		649D78D4242468D700F147D8 /* Usuario .swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D3242468D700F147D8 /* Usuario .swift */; };
@@ -27,7 +28,6 @@
 		64C104AF24180D1200982E0E /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104AE24180D1200982E0E /* CardDetail.swift */; };
 		64C104B124195DCF00982E0E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B024195DCF00982E0E /* CardView.swift */; };
 		64C104B32419B98400982E0E /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B22419B98400982E0E /* CardList.swift */; };
-		64DF86F424212C2600938143 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF86F324212C2600938143 /* AccountView.swift */; };
 		64DFFF052425E374004B3C42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DFFF042425E374004B3C42 /* GoogleService-Info.plist */; };
 		64DFFF082425E697004B3C42 /* Adventures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF072425E697004B3C42 /* Adventures.swift */; };
 		64DFFF0A2425E85C004B3C42 /* OnTheJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF092425E85C004B3C42 /* OnTheJob.swift */; };
@@ -58,6 +58,7 @@
 		260448F17310098D4277F18B /* Pods_Logi_LogiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logi_LogiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		482A382DEE9950BBAB96BB51 /* Pods-Logi-LogiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logi-LogiUITests.debug.xcconfig"; path = "Target Support Files/Pods-Logi-LogiUITests/Pods-Logi-LogiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5467E291B184D19D7D22A4FF /* Pods-Logi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logi.release.xcconfig"; path = "Target Support Files/Pods-Logi/Pods-Logi.release.xcconfig"; sourceTree = "<group>"; };
+		6441839024268A8600175A13 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		649056652417F71B00B91A98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		649D78D12424672E00F147D8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		649D78D3242468D700F147D8 /* Usuario .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario .swift"; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		64C104AE24180D1200982E0E /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		64C104B024195DCF00982E0E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		64C104B22419B98400982E0E /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
-		64DF86F324212C2600938143 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		64DFFF042425E374004B3C42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64DFFF072425E697004B3C42 /* Adventures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventures.swift; sourceTree = "<group>"; };
 		64DFFF092425E85C004B3C42 /* OnTheJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheJob.swift; sourceTree = "<group>"; };
@@ -237,7 +237,7 @@
 		64DFFF0E2425F261004B3C42 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				64DF86F324212C2600938143 /* AccountView.swift */,
+				6441839024268A8600175A13 /* ProfileView.swift */,
 				64DFFF0F2425F29D004B3C42 /* AccountRow.swift */,
 				64DFFF112425F633004B3C42 /* BlurView.swift */,
 			);
@@ -514,11 +514,11 @@
 				64B811202417F3F900121044 /* LoginView.swift in Sources */,
 				649D78D62424696700F147D8 /* Inmueble.swift in Sources */,
 				649D78D4242468D700F147D8 /* Usuario .swift in Sources */,
-				64DF86F424212C2600938143 /* AccountView.swift in Sources */,
 				64C104AF24180D1200982E0E /* CardDetail.swift in Sources */,
 				64DFFF0C2425E8FE004B3C42 /* TopDestinations.swift in Sources */,
 				649D78D824246A1B00F147D8 /* Chat.swift in Sources */,
 				649D78DA24246A8500F147D8 /* Mensaje.swift in Sources */,
+				6441839124268A8600175A13 /* ProfileView.swift in Sources */,
 				64C104B32419B98400982E0E /* CardList.swift in Sources */,
 				64DFFF082425E697004B3C42 /* Adventures.swift in Sources */,
 				649D78D22424672E00F147D8 /* TabBar.swift in Sources */,

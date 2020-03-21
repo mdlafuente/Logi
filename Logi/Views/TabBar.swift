@@ -26,7 +26,7 @@ struct TabBar: View {
                 Text("MESSAGES")
             }
             
-            HomeView().tabItem {
+            ProfileView().tabItem {
                 Image(systemName: "person.fill")
                 Text("PROFILE")
             }
