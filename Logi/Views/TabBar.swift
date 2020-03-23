@@ -30,10 +30,8 @@ struct TabBar: View {
                 Image(systemName: "person.fill")
                 Text("PROFILE")
             }
-                
-        .edgesIgnoringSafeArea(.top)
-            
         }
+        .edgesIgnoringSafeArea(.top)
     }
 
     struct TabBar_Previews: PreviewProvider {
