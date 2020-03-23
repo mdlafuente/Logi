@@ -10,13 +10,13 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack(alignment: .center) {
-            ZStack(alignment: .center) {
+        VStack {
+            ZStack {
                 Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
-                    .frame(height: 400)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .edgesIgnoringSafeArea(.all)
-                    .offset()
+                    .edgesIgnoringSafeArea(.top)
+                    
                 
                 VStack(alignment: .center) {
                     Image("perfImg")
@@ -41,20 +41,25 @@ struct ProfileView: View {
                             ForEach(0 ..< 4) { item in
                                 Image(systemName: "star.fill")
                                     .foregroundColor(.white)
+                            }
                         }
+                        .padding()
                     }
-                    .padding()
                 }
             }
+            
+        VStack(alignment: .center){
+            AccountRow(title: "Account", subtitle: "", icon: "gear")
+                .padding(30)
+            AccountRow(title: "Payment method", subtitle: "", icon: "creditcard")
+                .padding(30)
+            AccountRow(title: "Personal info.", subtitle: "", icon: "info.circle")
+                .padding(30)
+            AccountRow(title: "Sign out", subtitle: "", icon: "square.and.arrow.up")
+                .padding(30)
         }
             
-            VStack(alignment: .center){
-                AccountRow(title: "Account", icon: "gear")
-                AccountRow(title: "Payment method", icon: "creditcard")
-                AccountRow(title: "Sign out", icon: "square.and.arrow.up")
-            }
-            
-            Spacer()
+        Spacer()
             
         }
     }

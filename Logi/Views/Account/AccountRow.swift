@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AccountRow: View {
     var title: String
+    var subtitle: String
     var icon: String
     
     var body: some View {
@@ -18,11 +19,15 @@ struct AccountRow: View {
                 .font(.system(size: 20, weight: .light))
                 .imageScale(.large)
                 .frame(width: 32, height: 32)
-                .foregroundColor(Color(#colorLiteral(red: 0.5845958222, green: 0.7446598774, blue: 0.8046478426, alpha: 1)))
+                .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
             
             Text(title)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
-                .frame(width: 120, alignment: .leading)
+                .frame(width: 300, alignment: .leading)
+            
+            Text(subtitle)
+                .font(.headline)
+                .foregroundColor(.secondary)
         }
     }
 }
