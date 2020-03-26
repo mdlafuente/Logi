@@ -7,7 +7,7 @@
 //
 
 struct Chat {
-    var mensajes: [Mensaje] 
+    var mensajes: Mensaje 
     var dueno: Usuario
     var inquilino: Usuario
 }

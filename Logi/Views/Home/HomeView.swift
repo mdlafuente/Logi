@@ -32,7 +32,7 @@ struct HomeView: View {
                     
                 HStack {
                     VStack {
-                        Text("We encourage all members of our comunity to aknowledge respect, equity, and positive recognition of differences are all cultivated, and the social and institutional response to disability poses no barrier to a positive experience.")
+                        Text("We encourage all members of our comunity to aknowledge the worlds current situation regardin COVID - 19. We ensukjbdkjbakjsbkaj jfjfjd kwos ssjs sos s sososos jsjsjsjs.")
                             .font(.body)
                             .fontWeight(.light)
                             .frame(width: 350, height: 150)

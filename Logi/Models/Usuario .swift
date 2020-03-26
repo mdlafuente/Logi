@@ -8,6 +8,12 @@
 //
 
 struct Usuario {
-    var usuario: String
+    var nombreUsuario: String
+    var email: String
     var password: String
+    
 }
+
+var usuario = Usuario(nombreUsuario: "Manuel De la Fuente", email: "mdlafuenter@hotmail.com", password: "123456")
+
+//Text(usuario.nombreUsuario)

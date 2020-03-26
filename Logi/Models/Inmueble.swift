@@ -14,7 +14,7 @@ struct Inmueble {
     var capacidad: Int
     var precio: Float
     var descripcion: String
-    var imagenes: [UIImage]
+    var imagenes: [UIImage] = []
     var dueno: Usuario
 }
 

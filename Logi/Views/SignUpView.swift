@@ -1,21 +1,21 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  Logi
 //
-//  Created by Manuel on 10/03/20.
+//  Created by Manuel on 24/03/20.
 //  Copyright © 2020 Manuel. All rights reserved.
 //
 
 import SwiftUI
-import UIKit
-//import FirebaseAuth
 
-struct LoginView: View {
+struct SignUpView: View {
     @State private var email = ""
+    @State private var account = ""
     @State private var password = ""
-    
+   
+
     var body: some View {
-            
+        
         VStack(alignment: .center, spacing: 15) {
             Text("¡ Bienvenido a Logi !")
                 .font(.largeTitle)
@@ -31,6 +31,14 @@ struct LoginView: View {
                 .cornerRadius(15.0)
                 .modifier(ShadowModifier())
             
+            TextField("Account", text: self.$account)
+                .frame(width: 350, height: 20)
+                .padding()
+                .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                .shadow(radius: 20)
+                .cornerRadius(15.0)
+                .modifier(ShadowModifier())
+            
             SecureField("Password", text: self.$password)
                 .frame(width: 350, height: 20)
                 .padding()
@@ -38,21 +46,8 @@ struct LoginView: View {
                 .cornerRadius(15.0)
                 .modifier(ShadowModifier())
             
-          
             Button(action: {}){
-                Text("Iniciar sesión con otro")
-                    .frame(width: 300, height: 50)
-                    .modifier(FontModifier())
-            }
-            
-            Button(action: {}){
-                Text("Crear una cuenta")
-                    .frame(width: 300, height: 50)
-                    .modifier(FontModifier())
-            }
-            
-            Button(action: {}){
-                Text("Sign In")
+                Text("Crear cuenta")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding([.top, .bottom])
@@ -62,17 +57,12 @@ struct LoginView: View {
                     .modifier(ShadowModifier())
                 
             }
-        
-            Spacer()
-            
         }
     }
 }
 
-
-
-struct LoginView_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SignUpView()
     }
 }

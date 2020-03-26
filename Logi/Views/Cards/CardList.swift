@@ -21,7 +21,7 @@ struct CardList: View {
                         .font(.largeTitle).bold()
                         .padding()
                         
-                    CardView(image: "casaSm1", location: "San Miguel de Allende, México.", name: "Casa Román", capacity: "8 - 10 personas")
+                    CardView(image: "casaSm1", location: "San Miguel de Allende, México.", name: "Casa Román", capacity: "10 - 12")
                         .onTapGesture {
                             self.showDetail.toggle()
                         }

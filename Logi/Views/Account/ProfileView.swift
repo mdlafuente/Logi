@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct ProfileView: View {
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct ProfileView: View {
                         .padding()
                     
                     VStack {
-                        Text("Manuel De la Fuente")
+                        Text(usuario.nombreUsuario)
                             .fontWeight(.bold)
                             .frame(width: 200, height: 50)
                             .font(.headline)
