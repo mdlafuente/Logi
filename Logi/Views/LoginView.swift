@@ -94,8 +94,8 @@ struct LoginView: View {
                 
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("Forgot password?")
-                        .offset(x: -10, y: 675)
                 }
+                 .offset(x: -10, y: 675)
                 
                 Button(action: {}){
                     Text("Sign In")
@@ -107,8 +107,9 @@ struct LoginView: View {
                         .frame(width: 180, height: 50)
                         .cornerRadius(15.0)
                         .modifier(ShadowModifier())
-                        .offset(x: 25, y: 675)
+                        
                 }
+                .offset(x: 25, y: 675)
             }
         }
     }
