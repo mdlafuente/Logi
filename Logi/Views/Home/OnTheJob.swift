@@ -19,6 +19,8 @@ struct OnTheJob: View {
                 CardView(image: "dptoLo1", location: "Gosfield St. LND.", name: "Financial district", capacity: "1 - 4")
                 
                 CardView(image: "dptoSf1-1", location: "Mission District, SF.", name: "Folsom St.", capacity: "2 - 3.")
+                
+                CardView(image: "dptoSf1-1", location: "Mission District, SF.", name: "Folsom St.", capacity: "2 - 3.")
             }
             .frame(height: 350)
         }

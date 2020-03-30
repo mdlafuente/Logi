@@ -12,7 +12,6 @@
 		6441839124268A8600175A13 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839024268A8600175A13 /* ProfileView.swift */; };
 		64418393242921A000175A13 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64418392242921A000175A13 /* ChatView.swift */; };
 		6441839724292D4E00175A13 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839624292D4E00175A13 /* PlacesView.swift */; };
-		6441839C242A942300175A13 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839B242A942300175A13 /* SignUpView.swift */; };
 		6441839E242BC23100175A13 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839D242BC23100175A13 /* CardDetail.swift */; };
 		649056662417F71B00B91A98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649056652417F71B00B91A98 /* HomeView.swift */; };
 		649D78D22424672E00F147D8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D12424672E00F147D8 /* TabBar.swift */; };
@@ -27,10 +26,10 @@
 		64B810FC2417F38A00121044 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B810FA2417F38A00121044 /* LaunchScreen.storyboard */; };
 		64B811072417F38A00121044 /* LogiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B811062417F38A00121044 /* LogiTests.swift */; };
 		64B811122417F38A00121044 /* LogiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B811112417F38A00121044 /* LogiUITests.swift */; };
-		64B811202417F3F900121044 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8111F2417F3F900121044 /* LoginView.swift */; };
 		64B811222417F41600121044 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B811212417F41600121044 /* Modifiers.swift */; };
 		64C104B124195DCF00982E0E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B024195DCF00982E0E /* CardView.swift */; };
 		64C104B32419B98400982E0E /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C104B22419B98400982E0E /* CardList.swift */; };
+		64D67C7F243135CB0002375B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D67C7E243135CB0002375B /* LoginView.swift */; };
 		64DFFF052425E374004B3C42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64DFFF042425E374004B3C42 /* GoogleService-Info.plist */; };
 		64DFFF082425E697004B3C42 /* Adventures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF072425E697004B3C42 /* Adventures.swift */; };
 		64DFFF0A2425E85C004B3C42 /* OnTheJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DFFF092425E85C004B3C42 /* OnTheJob.swift */; };
@@ -64,7 +63,6 @@
 		6441839024268A8600175A13 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		64418392242921A000175A13 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		6441839624292D4E00175A13 /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
-		6441839B242A942300175A13 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		6441839D242BC23100175A13 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		649056652417F71B00B91A98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		649D78D12424672E00F147D8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -85,10 +83,10 @@
 		64B8110D2417F38A00121044 /* LogiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B811112417F38A00121044 /* LogiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogiUITests.swift; sourceTree = "<group>"; };
 		64B811132417F38A00121044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64B8111F2417F3F900121044 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64B811212417F41600121044 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		64C104B024195DCF00982E0E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		64C104B22419B98400982E0E /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
+		64D67C7E243135CB0002375B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		64DFFF042425E374004B3C42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64DFFF072425E697004B3C42 /* Adventures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adventures.swift; sourceTree = "<group>"; };
 		64DFFF092425E85C004B3C42 /* OnTheJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheJob.swift; sourceTree = "<group>"; };
@@ -150,9 +148,8 @@
 		649D78CF2424643100F147D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6441839B242A942300175A13 /* SignUpView.swift */,
-				64B8111F2417F3F900121044 /* LoginView.swift */,
 				649D78D12424672E00F147D8 /* TabBar.swift */,
+				64D67C7E243135CB0002375B /* LoginView.swift */,
 				64B811212417F41600121044 /* Modifiers.swift */,
 				6441839524292D1D00175A13 /* Places */,
 				6441839424292B6A00175A13 /* Inbox */,
@@ -537,7 +534,6 @@
 				64B810F02417F38900121044 /* AppDelegate.swift in Sources */,
 				6441839724292D4E00175A13 /* PlacesView.swift in Sources */,
 				64B810F22417F38900121044 /* SceneDelegate.swift in Sources */,
-				64B811202417F3F900121044 /* LoginView.swift in Sources */,
 				649D78D62424696700F147D8 /* Inmueble.swift in Sources */,
 				649D78D4242468D700F147D8 /* Usuario .swift in Sources */,
 				64DFFF0C2425E8FE004B3C42 /* TopDestinations.swift in Sources */,
@@ -547,8 +543,8 @@
 				64418393242921A000175A13 /* ChatView.swift in Sources */,
 				64C104B32419B98400982E0E /* CardList.swift in Sources */,
 				64DFFF082425E697004B3C42 /* Adventures.swift in Sources */,
-				6441839C242A942300175A13 /* SignUpView.swift in Sources */,
 				6441839E242BC23100175A13 /* CardDetail.swift in Sources */,
+				64D67C7F243135CB0002375B /* LoginView.swift in Sources */,
 				649D78D22424672E00F147D8 /* TabBar.swift in Sources */,
 				649056662417F71B00B91A98 /* HomeView.swift in Sources */,
 				64DFFF122425F635004B3C42 /* BlurView.swift in Sources */,

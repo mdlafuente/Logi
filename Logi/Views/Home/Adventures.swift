@@ -19,6 +19,8 @@ struct Adventures: View {
                 CardView(image: "adTf1", location: "Tierra de Fuego, Chile", name: "Tip of the world", capacity: "1 - 2 weeks")
                 
                 CardView(image: "adKill1", location: "Kilimanjaro, Tanzania.", name: "Kilimanjaro Safari", capacity: "2 - 3 weeks.")
+                
+                CardView(image: "adKill1", location: "Kilimanjaro, Tanzania.", name: "Kilimanjaro Safari", capacity: "2 - 3 weeks.")
             }
             .frame(height: 350)
         }

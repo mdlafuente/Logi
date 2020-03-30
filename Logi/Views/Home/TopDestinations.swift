@@ -20,6 +20,8 @@ struct TopDestinations: View {
                 
                 CardView(image: "dptoSf1", location: "SunnyVale, CA.", name: "Kifer Rd.", capacity: "2 - 4 personas")
                 
+                CardView(image: "dptoSf1", location: "SunnyVale, CA.", name: "Kifer Rd.", capacity: "2 - 4 personas")
+                
             }
             .frame(height: 350)
             
