@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1079695190435-61uih1afkqbch43ufotpvpsd2hd8msp7.apps.googleusercontent.com</string>
+	<string>1088420123039-at9k087j09eo6eiivdcodt0c7gaaopd1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1079695190435-61uih1afkqbch43ufotpvpsd2hd8msp7</string>
+	<string>com.googleusercontent.apps.1088420123039-at9k087j09eo6eiivdcodt0c7gaaopd1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCu8E3QZFvsJVSu3e10je80ga4vBUDUOSc</string>
+	<string>AIzaSyBIpthFPXwwMg-ZWlVmFhdn84wwxO13lQU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1079695190435</string>
+	<string>1088420123039</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.nivelate.logi</string>
 	<key>PROJECT_ID</key>
-	<string>logi-f7b84</string>
+	<string>logi-8f231</string>
 	<key>STORAGE_BUCKET</key>
-	<string>logi-f7b84.appspot.com</string>
+	<string>logi-8f231.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1079695190435:ios:c0ae0fc527e9717bc81216</string>
+	<string>1:1088420123039:ios:00714962d6d06f6aeeedaa</string>
 	<key>DATABASE_URL</key>
-	<string>https://logi-f7b84.firebaseio.com</string>
+	<string>https://logi-8f231.firebaseio.com</string>
 </dict>
 </plist>

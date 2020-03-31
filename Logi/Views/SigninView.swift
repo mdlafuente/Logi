@@ -1,26 +1,25 @@
 //
-//  LoginView.swift
+//  SigninView.swift
 //  Logi
 //
-//  Created by Manuel on 29/03/20.
+//  Created by Manuel on 30/03/20.
 //  Copyright © 2020 Manuel. All rights reserved.
 //
 
 import SwiftUI
 import Firebase
 
-func login(withEmail email: String, password: String){
-
-    Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-        if let e = error{
-            print("Error en Login \(e)")
-            return
-        }
-        print(user as Any)
-    }
+func createUser(email: String, password: String, _ callback: ((Error?) -> ())? = nil){
+      Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+          if let e = error{
+              callback?(e)
+              return
+          }
+          callback?(nil)
+      }
 }
 
-struct LoginView: View {
+struct SigninView: View {
     @State private var email = ""
     @State private var password = ""
     
@@ -34,30 +33,24 @@ struct LoginView: View {
             
             VStack {
                 GeometryReader { geometry in
-                    Text("Welcome to Logi!")
+                    Text("New to Logi?")
                         .font(.system(size: geometry.size.width/10, weight: .bold))
                         .foregroundColor(.white)
                 }
                 .frame(maxWidth: 375, maxHeight: 100)
-                .padding(.horizontal, 16)
+                .padding(.top, 100)
                 
-                Text("Go See!")
-                    .font(.headline)
-                    .frame(width: 250)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                
-                Spacer()
             }
             .multilineTextAlignment(.center)
             .padding(.top, 50)
-            .frame(height: 477)
+            .frame(maxHeight: .infinity)
             .frame(maxWidth: .infinity)
             .background(Image(uiImage: #imageLiteral(resourceName: "Card4") ), alignment: .bottom)
+            .offset(x: 0, y: -350)
             .padding(.bottom, 100)
-            .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
+            .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .edgesIgnoringSafeArea(.top)
+            .edgesIgnoringSafeArea(.all)
         
             VStack {
                 HStack {
@@ -102,34 +95,28 @@ struct LoginView: View {
             .modifier(ShadowModifier())
             .offset(x: 0, y: 480)
             
-            VStack {
-                
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                    Text("Don´t have an account?")
-                }
-                .offset(x: 0, y: 675)
-            
-                Button(action: {
-                login(withEmail: self.email, password: self.password)
-                }){
-                    Text("Sign In")
+            HStack {
+                Button(action: {}){
+                    Text("Create an account")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding([.top, .bottom])
-                        .frame(width: 250, height: 50)
-                        .background(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
-                        .frame(width: 250, height: 50)
+                        .frame(width: 350, height: 50)
+                        .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
+                        .frame(width: 350, height: 50)
                         .cornerRadius(15.0)
                         .modifier(ShadowModifier())
+                        
                 }
-                .offset(x: 0, y: 710)
+                .offset(x: 0, y: 675)
             }
         }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct SigninView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SigninView()
     }
 }
+
