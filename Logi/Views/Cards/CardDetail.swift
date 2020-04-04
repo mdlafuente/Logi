@@ -49,27 +49,35 @@ struct CardDetail: View {
                 
                 VStack(alignment: .leading, spacing: 30){
                     
-                    Text("Casa Soleira")
+                    Text("Casa Román")
                         .font(.title).bold()
-                   
-                    Text("$2,980")
-                        .font(.subheadline).bold()
+                        .padding(.top, 30)
                     
-                    Text("10 - 12 personas")
-                        .font(.subheadline).bold()
-                        .padding()
+                    Text("San Miguel de Allende")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                   
+                    HStack {
+                        Text("$2,980")
+                            .font(.subheadline).bold()
+                            .frame(width: 100, height: 30, alignment: .leading)
+                        
+                        Text("10 - 12 personas")
+                            .font(.subheadline).bold()
+                            .frame(width: 200, height: 30, alignment: .trailing)
+                    }
                     
                     Text("Hermosa propiedad con acabado México contemporaneo, dentro del centro de San Miguel de Allende, a solo 5 minutos de la catedral.")
                         .multilineTextAlignment(.leading)
-                        .padding()
+                        .padding(.top, 20)
 
                     Text("La casa cuenta con cinco cuartos con baño completo, cocina y comedor equipados para 15 personas, terraza con azador y jarín amplio ¡Perfecta para pasar un fin de semana con familia y amigos! ")
                         .multilineTextAlignment(.leading)
-                        .padding()
+                      
                     
                     Text("Minimal coding experience required, such as in HTML and CSS. Please note that Xcode 11 and Catalina are essential. Once you get everything installed, it'll get a lot friendlier! I added a bunch of troubleshoots at the end of this page to help you navigate the issues you might encounter.")
                         .multilineTextAlignment(.leading)
-                        .padding()
+                      
                     
                     Button(action: {}) {
                         Text("Reservar propiedad")

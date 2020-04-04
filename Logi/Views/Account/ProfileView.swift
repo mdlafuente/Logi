@@ -7,9 +7,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
+func logout() -> Bool {
+    do {
+        try Auth.auth().signOut()
+    } catch let signOutError as NSError {
+        print ("Error signing out: %@", signOutError)
+        return false
+    }
+    print("did signed out")
+    return true
+}
 
 struct ProfileView: View {
+    @EnvironmentObject var settings : UserSettings
+    
     var body: some View {
         VStack {
             ZStack {
@@ -17,7 +30,7 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                     .edgesIgnoringSafeArea(.top)
-                    
+                
                 
                 VStack(alignment: .center) {
                     Image("perfImg")
@@ -32,7 +45,7 @@ struct ProfileView: View {
                             .frame(width: 200, height: 50)
                             .font(.headline)
                             .foregroundColor(Color.white)
-                    
+                        
                         Text("Querétaro, México")
                             .font(.subheadline)
                             .fontWeight(.bold)
@@ -49,18 +62,34 @@ struct ProfileView: View {
                 }
             }
             
-        VStack(alignment: .center){
-            AccountRow(title: "Account", subtitle: "", icon: "gear")
-                .padding(30)
-            AccountRow(title: "Payment method", subtitle: "", icon: "creditcard")
-                .padding(30)
-            AccountRow(title: "Personal info.", subtitle: "", icon: "info.circle")
-                .padding(30)
-            AccountRow(title: "Sign out", subtitle: "", icon: "square.and.arrow.up")
-                .padding(30)
-        }
+            VStack(alignment: .center){
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    AccountRow(title: "Account", subtitle: "", icon: "gear")
+                        .padding(30)
+                }
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    AccountRow(title: "Payment method", subtitle: "", icon: "creditcard")
+                        .padding(30)
+                }
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    AccountRow(title: "Personal info.", subtitle: "", icon: "info.circle")
+                        .padding(30)
+                }
+                
+                Button(action: {
+                    if logout() {
+                        self.settings.loggedIn = false 
+                    }
+                }) {
+                    AccountRow(title: "Sign out", subtitle: "", icon: "square.and.arrow.up")
+                        .padding(30)
+                }
+            }
             
-        Spacer()
+            Spacer()
             
         }
     }

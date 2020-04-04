@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Inmueble {
+struct Casa {
     var ubicacion: String
     var nombre: String
     var capacidad: Int

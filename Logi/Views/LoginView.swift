@@ -9,7 +9,7 @@
 import SwiftUI
 import Firebase
 
-func login(withEmail email: String, password: String){
+func login(withEmail email: String, password: String, userSettings: UserSettings) {
 
     Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
         if let e = error{
@@ -17,13 +17,14 @@ func login(withEmail email: String, password: String){
             return
         }
         print(user as Any)
+        userSettings.loggedIn = true
     }
 }
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
-    
+    @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         
@@ -110,7 +111,7 @@ struct LoginView: View {
                 .offset(x: 0, y: 675)
             
                 Button(action: {
-                login(withEmail: self.email, password: self.password)
+                    login(withEmail: self.email, password: self.password, userSettings: self.settings)
                 }){
                     Text("Sign In")
                         .font(.headline)

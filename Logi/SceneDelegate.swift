@@ -17,16 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        // Create the SwiftUI view that provides the window contents.
         
-        // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
+            let settings = UserSettings()
+            if Auth.auth().currentUser != nil {
+                settings.loggedIn = true
+            }
+            
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = Auth.auth().currentUser == nil ? UIHostingController(rootView: LoginView()) : UIHostingController(rootView: TabBar())
+            window.rootViewController = UIHostingController(rootView: StartView().environmentObject(settings))
             self.window = window
             window.makeKeyAndVisible()
         }

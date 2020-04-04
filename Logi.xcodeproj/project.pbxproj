@@ -15,10 +15,11 @@
 		6441839E242BC23100175A13 /* CardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441839D242BC23100175A13 /* CardDetail.swift */; };
 		6468C09924325B65008C3D45 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468C09824325B65008C3D45 /* SigninView.swift */; };
 		6468C09B2433CFF8008C3D45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6468C09A2433CFF8008C3D45 /* GoogleService-Info.plist */; };
+		646E146E24391A42003C1BEE /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E146D24391A42003C1BEE /* UserSettings.swift */; };
 		649056662417F71B00B91A98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649056652417F71B00B91A98 /* HomeView.swift */; };
 		649D78D22424672E00F147D8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D12424672E00F147D8 /* TabBar.swift */; };
 		649D78D4242468D700F147D8 /* Usuario .swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D3242468D700F147D8 /* Usuario .swift */; };
-		649D78D62424696700F147D8 /* Inmueble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D52424696700F147D8 /* Inmueble.swift */; };
+		649D78D62424696700F147D8 /* Casa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D52424696700F147D8 /* Casa.swift */; };
 		649D78D824246A1B00F147D8 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D724246A1B00F147D8 /* Chat.swift */; };
 		649D78DA24246A8500F147D8 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649D78D924246A8500F147D8 /* Mensaje.swift */; };
 		64B810F02417F38900121044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B810EF2417F38900121044 /* AppDelegate.swift */; };
@@ -67,10 +68,11 @@
 		6441839D242BC23100175A13 /* CardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetail.swift; sourceTree = "<group>"; };
 		6468C09824325B65008C3D45 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		6468C09A2433CFF8008C3D45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		646E146D24391A42003C1BEE /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		649056652417F71B00B91A98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		649D78D12424672E00F147D8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		649D78D3242468D700F147D8 /* Usuario .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Usuario .swift"; sourceTree = "<group>"; };
-		649D78D52424696700F147D8 /* Inmueble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inmueble.swift; sourceTree = "<group>"; };
+		649D78D52424696700F147D8 /* Casa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casa.swift; sourceTree = "<group>"; };
 		649D78D724246A1B00F147D8 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		649D78D924246A8500F147D8 /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
 		64B810EC2417F38900121044 /* Logi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				649D78D12424672E00F147D8 /* TabBar.swift */,
-				64D67C7E243135CB0002375B /* LoginView.swift */,
 				6468C09824325B65008C3D45 /* SigninView.swift */,
+				64D67C7E243135CB0002375B /* LoginView.swift */,
 				64B811212417F41600121044 /* Modifiers.swift */,
 				6441839524292D1D00175A13 /* Places */,
 				6441839424292B6A00175A13 /* Inbox */,
@@ -167,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				649D78D3242468D700F147D8 /* Usuario .swift */,
-				649D78D52424696700F147D8 /* Inmueble.swift */,
+				649D78D52424696700F147D8 /* Casa.swift */,
 				649D78D724246A1B00F147D8 /* Chat.swift */,
 				649D78D924246A8500F147D8 /* Mensaje.swift */,
 			);
@@ -201,6 +203,7 @@
 			children = (
 				64B810EF2417F38900121044 /* AppDelegate.swift */,
 				64B810F12417F38900121044 /* SceneDelegate.swift */,
+				646E146D24391A42003C1BEE /* UserSettings.swift */,
 				649D78D02424649300F147D8 /* Models */,
 				649D78CF2424643100F147D8 /* Views */,
 				64B810F52417F38A00121044 /* Assets.xcassets */,
@@ -538,7 +541,7 @@
 				64B810F02417F38900121044 /* AppDelegate.swift in Sources */,
 				6441839724292D4E00175A13 /* PlacesView.swift in Sources */,
 				64B810F22417F38900121044 /* SceneDelegate.swift in Sources */,
-				649D78D62424696700F147D8 /* Inmueble.swift in Sources */,
+				649D78D62424696700F147D8 /* Casa.swift in Sources */,
 				649D78D4242468D700F147D8 /* Usuario .swift in Sources */,
 				64DFFF0C2425E8FE004B3C42 /* TopDestinations.swift in Sources */,
 				649D78D824246A1B00F147D8 /* Chat.swift in Sources */,
@@ -547,6 +550,7 @@
 				64418393242921A000175A13 /* ChatView.swift in Sources */,
 				64C104B32419B98400982E0E /* CardList.swift in Sources */,
 				64DFFF082425E697004B3C42 /* Adventures.swift in Sources */,
+				646E146E24391A42003C1BEE /* UserSettings.swift in Sources */,
 				6441839E242BC23100175A13 /* CardDetail.swift in Sources */,
 				64D67C7F243135CB0002375B /* LoginView.swift in Sources */,
 				649D78D22424672E00F147D8 /* TabBar.swift in Sources */,
