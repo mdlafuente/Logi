@@ -8,13 +8,28 @@
 
 import UIKit
 
-struct Casa {
+struct Casa: Identifiable {
+    var id = UUID()
+    var tipo: String
     var ubicacion: String
     var nombre: String
-    var capacidad: Int
-    var precio: Float
-    var descripcion: String
-    var imagenes: [UIImage] = []
-    var dueno: Usuario
+    var capacidad: String
+    var precio: Int
+    var descripcion1: String
+    var descripcion2: String
+    var descripcion3: String
+    var imagen: String
+    
+    init(dictionary: [String: Any]){
+        self.tipo = dictionary["tipo"] as? String ?? "casa"
+        self.ubicacion = dictionary["ubicacion"] as? String ?? "MX"
+        self.nombre = dictionary["nombre"] as? String ?? "Casa Lola"
+        self.capacidad = dictionary["capacidad"] as? String ?? "1 - 2 personas"
+        self.precio = dictionary["precio"] as? Int ?? 3000
+        self.descripcion1 = dictionary["descripcion1"] as? String ?? "No hay descripción"
+        self.descripcion2 = dictionary["descripcion2"] as? String ?? "No hay descripción"
+        self.descripcion3 = dictionary["descripcion3"] as? String ?? "No hay descripción"
+        self.imagen = dictionary["imagen"] as? String ?? "casaCa1"
+    }
 }
 

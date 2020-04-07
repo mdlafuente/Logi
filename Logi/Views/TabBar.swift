@@ -17,6 +17,7 @@ enum Tab: Hashable {
 
 struct TabBar: View {
     @State var selectedTab: Tab = .home
+
     
     var body: some View {
         TabView(selection: $selectedTab){

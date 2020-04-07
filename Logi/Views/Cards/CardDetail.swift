@@ -25,7 +25,7 @@ struct CardDetail: View {
                         ZStack{
                             Image("casaSm1")
                                 .opacity(show ? 0 : 1)
-                                .frame(maxWidth: show ? .infinity : screen.width, maxHeight: show ? 460 : 280)
+                                .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 500 : 280) 
                             
                             VStack{
                                 Image(systemName: "xmark")
@@ -96,9 +96,9 @@ struct CardDetail: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
-        .edgesIgnoringSafeArea(.bottom)
 //        .background(Color.white)
         .background(BlurView(style: .systemMaterial))
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

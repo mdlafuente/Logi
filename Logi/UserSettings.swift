@@ -24,3 +24,26 @@ struct StartView: View {
         }
     }
 }
+
+/*
+class SceneDelegate {
+    
+    func start() {
+        
+        if (UserUtils.isAuthenticated) {
+            // Logeado
+        } else {
+            // No Logeado
+        }
+        
+    }
+    
+}
+
+class UserUtils {
+    static let isAuthenticated: Bool = Auth.auth().currentUser != nil
+}
+*/
+
+// Estructura Fav 
+// users/\(uid)/favorites/\(propertyId)

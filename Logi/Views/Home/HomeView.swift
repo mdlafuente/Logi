@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 struct HomeView: View {
     @State private var search = ""
     @State var showAccount = false
+    @ObservedObject var controller = HomeController()
     
     var body: some View {
         ZStack {
@@ -56,7 +59,7 @@ struct HomeView: View {
                             .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                     }
                     
-                    TopDestinations()
+                    PropertyList(propiedades: controller.propiedades)
                          
                 }
             
@@ -68,7 +71,7 @@ struct HomeView: View {
                         .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                 }
                 
-                Adventures()
+                PropertyList(propiedades: controller.adventures)
                     
                 HStack {
                     VStack {
@@ -87,7 +90,7 @@ struct HomeView: View {
                     }
                 }
                     
-                OnTheJob()
+                PropertyList(propiedades: controller.apartments)
             }
         }
     }
