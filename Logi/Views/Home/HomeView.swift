@@ -80,7 +80,7 @@ struct HomeView: View {
                     
                 PropertyList(selectedProperty: $selectedProperty, propiedades: controller.apartments)
             }
-            CardDetail(propiedad: selectedProperty)
+            CardDetail(propiedad: $selectedProperty)
                 .offset(y: selectedProperty.precio != -1 ? 0 : screen.height)
                 .animation(.default)
         }

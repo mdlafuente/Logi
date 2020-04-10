@@ -9,9 +9,7 @@
 import SwiftUI
 
 struct CardDetail: View {
-    @State var show = false
-    
-    let propiedad: Casa
+    @Binding var propiedad: Casa
 
     var body: some View {
         ScrollView{
@@ -24,26 +22,27 @@ struct CardDetail: View {
                         
                         ZStack{
                             Image(propiedad.imagen)
-                                .opacity(show ? 0 : 1)
-                                .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 500 : 280) 
+                                .frame(maxWidth: screen.width - 60, maxHeight: 280)
                             
                             VStack{
                                 Image(systemName: "xmark")
                                     .font(.system(size: 16, weight: .medium))
                                     .foregroundColor(.white)
                             }
+                            .onTapGesture {
+                                self.propiedad = Casa()
+                            }
                             .frame(width: 36, height: 36)
                             .background(Color.black)
                             .clipShape(Circle())
-                            .opacity(show ? 1 : 0)
-                            .offset()
+                            .offset(x: 160, y: -80)
                         }
                     }
                     Spacer()
                 }
-                .padding(show ? 30 : 20)
-                .padding(.top, show ? 30 : 0)
-                .frame(maxWidth: show ? .infinity : screen.width, maxHeight: show ? 460 : 280)
+                .padding(20)
+                .padding(.top, 0)
+                .frame(maxWidth: screen.width, maxHeight: 280)
                 .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                 
