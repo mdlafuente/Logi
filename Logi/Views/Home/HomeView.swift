@@ -11,8 +11,7 @@ import Firebase
 
 
 struct HomeView: View {
-    @State private var search = ""
-    @State var showAccount = false
+    @State var selectedProperty = Casa()
     @ObservedObject var controller = HomeController()
     
     var body: some View {
@@ -21,18 +20,6 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
-                VStack {
-                    HStack {
-                        TextField("Search", text: self.$search)
-                            .frame(width: 350, height: 20)
-                            .padding()
-                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            .shadow(radius: 20)
-                            .cornerRadius(15.0)
-                            .modifier(ShadowModifier())
-                    }
-                }
-                    
                 HStack {
                     VStack {
                         Text("We encourage all members of our comunity to aknowledge the worlds current situation regardin COVID - 19. We ensukjbdkjbakjsbkaj jfjfjd kwos ssjs sos s sososos jsjsjsjs.")
@@ -59,7 +46,7 @@ struct HomeView: View {
                             .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                     }
                     
-                    PropertyList(propiedades: controller.propiedades)
+                    PropertyList(selectedProperty: $selectedProperty, propiedades: controller.propiedades)
                          
                 }
             
@@ -71,7 +58,7 @@ struct HomeView: View {
                         .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                 }
                 
-                PropertyList(propiedades: controller.adventures)
+                PropertyList(selectedProperty: $selectedProperty, propiedades: controller.adventures)
                     
                 HStack {
                     VStack {
@@ -80,6 +67,7 @@ struct HomeView: View {
                             .multilineTextAlignment(.leading)
                             .frame(width: 350, height: 20, alignment: .leading)
                             .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
+                        
                         Text("Boost your business trip")
                             .font(.headline)
                             .foregroundColor(.secondary)
@@ -90,8 +78,11 @@ struct HomeView: View {
                     }
                 }
                     
-                PropertyList(propiedades: controller.apartments)
+                PropertyList(selectedProperty: $selectedProperty, propiedades: controller.apartments)
             }
+            CardDetail(propiedad: selectedProperty)
+                .offset(y: selectedProperty.precio != -1 ? 0 : screen.height)
+                .animation(.default)
         }
     }
 }

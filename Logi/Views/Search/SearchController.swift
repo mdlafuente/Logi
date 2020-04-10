@@ -1,23 +1,20 @@
 //
-//  HomeController.swift
+//  SearchController.swift
 //  Logi
 //
-//  Created by Sandra Roman on 07/04/20.
+//  Created by Manuel on 10/04/20.
 //  Copyright © 2020 Manuel. All rights reserved.
 //
 
 import SwiftUI
 import Firebase
 
-class HomeController: ObservableObject {
+class SearchController: ObservableObject{
     @Published var propiedades = [Casa]()
-    @Published var adventures = [Casa]()
-    @Published var apartments = [Casa]()
     
-    init() {
+    init(){
         fetchAll()
     }
-    
     func fetchAll() {
         let db = Firestore.firestore()
         
@@ -27,19 +24,9 @@ class HomeController: ObservableObject {
             } else {
                 for document in querySnapshot!.documents {
                     let casa = Casa(dictionary: document.data())
-                    self.addCasaToCorrespondingArray(casa: casa)
+                    self.propiedades.append(casa)
                 }
             }
-        }
-    }
-    
-    func addCasaToCorrespondingArray(casa: Casa) {
-        if casa.tipo == "adventure" {
-            adventures.append(casa)
-        } else if casa.tipo == "apartment" {
-            apartments.append(casa)
-        } else {
-            propiedades.append(casa)
         }
     }
 }

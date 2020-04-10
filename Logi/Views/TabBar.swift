@@ -17,7 +17,6 @@ enum Tab: Hashable {
 
 struct TabBar: View {
     @State var selectedTab: Tab = .home
-
     
     var body: some View {
         TabView(selection: $selectedTab){
@@ -31,9 +30,9 @@ struct TabBar: View {
                 Text("PLACES")
             }.tag(Tab.places)
             
-            ChatView().tabItem {
-                Image(systemName: "message.fill")
-                Text("INBOX")
+            SearchView().tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("SEARCH")
             }.tag(Tab.inbox)
             
             ProfileView().tabItem {

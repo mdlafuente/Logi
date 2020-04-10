@@ -10,7 +10,6 @@ import SwiftUI
 
 class UserSettings: ObservableObject {
     @Published var loggedIn : Bool = false
-    
 }
 
 struct StartView: View {
@@ -25,25 +24,3 @@ struct StartView: View {
     }
 }
 
-/*
-class SceneDelegate {
-    
-    func start() {
-        
-        if (UserUtils.isAuthenticated) {
-            // Logeado
-        } else {
-            // No Logeado
-        }
-        
-    }
-    
-}
-
-class UserUtils {
-    static let isAuthenticated: Bool = Auth.auth().currentUser != nil
-}
-*/
-
-// Estructura Fav 
-// users/\(uid)/favorites/\(propertyId)

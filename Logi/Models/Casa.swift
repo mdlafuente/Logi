@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Casa: Identifiable {
+struct Casa: Identifiable, Hashable {
     var id = UUID()
     var tipo: String
     var ubicacion: String
@@ -30,6 +30,18 @@ struct Casa: Identifiable {
         self.descripcion2 = dictionary["descripcion2"] as? String ?? "No hay descripción"
         self.descripcion3 = dictionary["descripcion3"] as? String ?? "No hay descripción"
         self.imagen = dictionary["imagen"] as? String ?? "casaCa1"
+    }
+    
+    init(){
+        self.tipo = ""
+        self.ubicacion = ""
+        self.nombre = ""
+        self.capacidad = ""
+        self.precio = -1
+        self.descripcion1 = ""
+        self.descripcion2 = ""
+        self.descripcion3 = ""
+        self.imagen = "casaSm1"
     }
 }
 

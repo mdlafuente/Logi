@@ -105,7 +105,7 @@ struct LoginView: View {
             
             VStack {
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {}) {
                     Text("Don´t have an account?")
                 }
                 .offset(x: 0, y: 675)

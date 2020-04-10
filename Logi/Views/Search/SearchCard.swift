@@ -1,40 +1,42 @@
 //
-//  SoloView.swift
+//  SearchCard.swift
 //  Logi
 //
-//  Created by Manuel on 11/03/20.
+//  Created by Manuel on 10/04/20.
 //  Copyright © 2020 Manuel. All rights reserved.
 //
 
 import SwiftUI
 
-let screen = UIScreen.main.bounds
-
-struct CardView: View {
+struct SearchCard: View {
     @State var isFavOn: Bool = true
     
-    var propiedad: Casa
+    var id = UUID()
+    var image: String
+    var location: String
+    var name: String
+    var capacity: String
     
     var body: some View {
         
         VStack {
-            Image(propiedad.imagen)
+            Image(image)
                 .resizable()
-                .frame(width: 320, height: 200)
+                .frame(height: 200)
                 .aspectRatio(contentMode: .fit)
             
             
             HStack {
                 VStack(alignment: .leading){
-                    Text(propiedad.ubicacion)
+                    Text(location)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text(propiedad.nombre)
+                    Text(name)
                         .font(.title)
                         .fontWeight(.black)
                         .foregroundColor(.primary)
                         .lineLimit(3)
-                    Text(propiedad.capacidad)
+                    Text(capacity)
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -55,9 +57,10 @@ struct CardView: View {
                     .frame(width: 0)
             }
             .padding()
+            
+            
         }
         .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-        .frame(width: 320)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -66,6 +69,12 @@ struct CardView: View {
             
         )
             .padding([.top, .horizontal])
+        
+    }
+}
+struct SearchCard_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchCard(image: "casaSm1", location: "San Miguel de Allende", name: "Casa Román", capacity: "8 - 10 personas")
         
     }
 }
