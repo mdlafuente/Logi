@@ -29,8 +29,6 @@ struct ProfileView: View {
                 Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .edgesIgnoringSafeArea(.top)
-                
                 
                 VStack(alignment: .center) {
                     Image("perfImg")
@@ -61,6 +59,7 @@ struct ProfileView: View {
                     }
                 }
             }
+            .edgesIgnoringSafeArea(.top)
             
             VStack(alignment: .center){
                 
@@ -88,9 +87,7 @@ struct ProfileView: View {
                         .padding(30)
                 }
             }
-            
             Spacer()
-            
         }
     }
 }

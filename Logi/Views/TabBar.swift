@@ -19,28 +19,32 @@ struct TabBar: View {
     @State var selectedTab: Tab = .home
     
     var body: some View {
-        TabView(selection: $selectedTab){
-            HomeView().tabItem {
-                Image(systemName: "house.fill")
-                Text("HOME")
-            }.tag(Tab.home)
+        ZStack {
+            Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+                .edgesIgnoringSafeArea(.all)
             
-            PlacesView(selectedTab: $selectedTab).tabItem {
-                Image(systemName: "hand.thumbsup.fill")
-                Text("PLACES")
-            }.tag(Tab.places)
-            
-            SearchView().tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("SEARCH")
-            }.tag(Tab.inbox)
-            
-            ProfileView().tabItem {
-                Image(systemName: "person.fill")
-                Text("PROFILE")
-            }.tag(Tab.profile)
+            TabView(selection: $selectedTab){
+                HomeView().tabItem {
+                    Image(systemName: "house.fill")
+                    Text("HOME")
+                }.tag(Tab.home)
+                
+                PlacesView(selectedTab: $selectedTab).tabItem {
+                    Image(systemName: "hand.thumbsup.fill")
+                    Text("PLACES")
+                }.tag(Tab.places)
+                
+                SearchView().tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("SEARCH")
+                }.tag(Tab.inbox)
+                
+                ProfileView().tabItem {
+                    Image(systemName: "person.fill")
+                    Text("PROFILE")
+                }.tag(Tab.profile)
+            }
         }
-        .edgesIgnoringSafeArea(.top)
     }
 
     struct TabBar_Previews: PreviewProvider {

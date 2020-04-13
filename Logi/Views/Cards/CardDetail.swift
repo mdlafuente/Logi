@@ -23,6 +23,7 @@ struct CardDetail: View {
                         ZStack{
                             Image(propiedad.imagen)
                                 .frame(maxWidth: screen.width - 60, maxHeight: 280)
+                                
                             
                             VStack{
                                 Image(systemName: "xmark")
