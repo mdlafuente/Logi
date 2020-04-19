@@ -29,9 +29,9 @@ func fetchFavorites(email: String, userSettings: UserSettings) {
     docRef.getDocument { (document, error) in
         if let document = document, document.exists {
             let data = document.data()
-            let favs = data!["favs"] as! [DocumentReference]
+            let favs = data!["favs"] as! [String]
             for fav in favs {
-                getFav(docRef: fav, userSettings: userSettings)
+                getFav(doc: fav, userSettings: userSettings) 
             }
         } else {
             print("Document does not exist")
@@ -39,7 +39,8 @@ func fetchFavorites(email: String, userSettings: UserSettings) {
     }
 }
 
-func getFav(docRef: DocumentReference, userSettings: UserSettings) {
+func getFav(doc: String, userSettings: UserSettings) {
+    let docRef = Firestore.firestore().collection("propiedades").document(doc)
     docRef.getDocument { (document, error) in
         if let document = document, document.exists {
             var casa = Casa(id: document.documentID, dictionary: document.data()!)

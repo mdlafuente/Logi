@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SearchCard: View {    
     @State var propiedad : Casa
@@ -48,6 +49,11 @@ struct SearchCard: View {
                             }
                             self.settings.favs.remove(at: index!)
                         }
+                        var favs = [String]()
+                        for fav in self.settings.favs {
+                            favs.append(fav.firebaseID)
+                        }
+                        Firestore.firestore().collection("favs").document(self.settings.email).setData([ "favs": favs ], merge: false)
                     }) {
                         Image(systemName: propiedad.isFav ? "heart.fill" : "heart")
                             .foregroundColor(propiedad.isFav ? Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)) : .black )
