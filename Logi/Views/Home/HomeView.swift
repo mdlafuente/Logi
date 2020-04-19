@@ -36,15 +36,47 @@ func fetchAll(settings: UserSettings) {
 }
  
 func addCasaToCorrespondingArray(settings: UserSettings, casa: Casa) {
-     if casa.tipo == "adventure" {
+    if casa.tipo == "adventure" {
         settings.adventures.append(casa)
-     } else if casa.tipo == "apartment" {
+    } else if casa.tipo == "apartment" {
         settings.apartments.append(casa)
-     } else {
+    } else {
         settings.propiedades.append(casa)
-     }
- }
+    }
+}
 
+func fetchFavorites(userSettings: UserSettings) {
+    if userSettings.email.isEmpty{
+        userSettings.email = Auth.auth().currentUser!.email!
+    }
+    let docRef = Firestore.firestore().collection("favs").document(userSettings.email)
+    
+    docRef.getDocument { (document, error) in
+        if let document = document, document.exists {
+            let data = document.data()
+            let favs = data!["favs"] as! [String]
+            userSettings.favs.removeAll()
+            for fav in favs {
+                getFav(doc: fav, userSettings: userSettings)
+            }
+        } else {
+            print("Document does not exist")
+        }
+    }
+}
+
+func getFav(doc: String, userSettings: UserSettings) {
+    let docRef = Firestore.firestore().collection("propiedades").document(doc)
+    docRef.getDocument { (document, error) in
+        if let document = document, document.exists {
+            var casa = Casa(id: document.documentID, dictionary: document.data()!)
+            casa.isFav = true
+            userSettings.favs.append(casa)
+        } else {
+            print("Document does not exist")
+        }
+    }
+}
 struct HomeView: View {
     @State var selectedProperty = Casa()
     @EnvironmentObject var settings: UserSettings
@@ -120,6 +152,7 @@ struct HomeView: View {
                 .animation(.easeIn)
         }
         .onAppear(){
+            fetchFavorites(userSettings: self.settings)
             fetchAll(settings: self.settings)
         }
     }
