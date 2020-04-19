@@ -23,7 +23,7 @@ class SearchController: ObservableObject{
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    let casa = Casa(dictionary: document.data())
+                    let casa = Casa(id: document.documentID, dictionary: document.data())
                     self.propiedades.append(casa)
                 }
             }

@@ -42,7 +42,7 @@ func fetchFavorites(email: String, userSettings: UserSettings) {
 func getFav(docRef: DocumentReference, userSettings: UserSettings) {
     docRef.getDocument { (document, error) in
         if let document = document, document.exists {
-            var casa = Casa(dictionary: document.data()!)
+            var casa = Casa(id: document.documentID, dictionary: document.data()!)
             casa.isFav = true
             userSettings.favs.append(casa)
         } else {

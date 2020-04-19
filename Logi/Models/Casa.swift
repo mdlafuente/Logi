@@ -22,8 +22,8 @@ struct Casa: Identifiable, Hashable {
     var imagen: String
     var isFav: Bool = false
     
-    init(dictionary: [String: Any]){
-        self.firebaseID = dictionary["id"] as? String ?? "firebaseID"
+    init(id: String, dictionary: [String: Any]){
+        self.firebaseID = id
         self.tipo = dictionary["tipo"] as? String ?? "casa"
         self.ubicacion = dictionary["ubicacion"] as? String ?? "MX"
         self.nombre = dictionary["nombre"] as? String ?? "Casa Lola"

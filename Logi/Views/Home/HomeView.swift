@@ -21,9 +21,9 @@ func fetchAll(settings: UserSettings) {
             print("Error getting documents: \(err)")
         } else {
             for document in querySnapshot!.documents {
-                var casa = Casa(dictionary: document.data())
+                var casa = Casa(id: document.documentID, dictionary: document.data())
                 if settings.favs.contains(where: { (c) -> Bool in
-                    return c.nombre == casa.nombre
+                    return c.firebaseID == casa.firebaseID
                 }){
                     casa.isFav = true
                     addCasaToCorrespondingArray(settings: settings, casa: casa)

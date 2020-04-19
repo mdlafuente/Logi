@@ -44,7 +44,7 @@ struct SearchCard: View {
                             self.settings.favs.append(self.propiedad)
                         } else {
                             let index = self.settings.favs.firstIndex { (casa) -> Bool in
-                                return casa.nombre == self.propiedad.nombre
+                                return casa.firebaseID == self.propiedad.firebaseID
                             }
                             self.settings.favs.remove(at: index!)
                         }
