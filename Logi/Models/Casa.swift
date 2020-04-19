@@ -10,6 +10,7 @@ import UIKit
 
 struct Casa: Identifiable, Hashable {
     var id = UUID()
+    var firebaseID: String
     var tipo: String
     var ubicacion: String
     var nombre: String
@@ -22,6 +23,7 @@ struct Casa: Identifiable, Hashable {
     var isFav: Bool = false
     
     init(dictionary: [String: Any]){
+        self.firebaseID = dictionary["id"] as? String ?? "firebaseID"
         self.tipo = dictionary["tipo"] as? String ?? "casa"
         self.ubicacion = dictionary["ubicacion"] as? String ?? "MX"
         self.nombre = dictionary["nombre"] as? String ?? "Casa Lola"
@@ -34,6 +36,7 @@ struct Casa: Identifiable, Hashable {
     }
     
     init(){
+        self.firebaseID = ""
         self.tipo = ""
         self.ubicacion = ""
         self.nombre = ""

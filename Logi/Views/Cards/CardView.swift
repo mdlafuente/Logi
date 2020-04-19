@@ -12,6 +12,7 @@ let screen = UIScreen.main.bounds
 
 struct CardView: View {
     @State var propiedad : Casa
+    @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         
@@ -41,6 +42,14 @@ struct CardView: View {
                 VStack {
                     Button(action: {
                         self.propiedad.isFav.toggle()
+                        if self.propiedad.isFav {
+                            self.settings.favs.append(self.propiedad)
+                        } else {
+                            let index = self.settings.favs.firstIndex { (casa) -> Bool in
+                                return casa.nombre == self.propiedad.nombre
+                            }
+                            self.settings.favs.remove(at: index!)
+                        }
                     }) {
                         Image(systemName: propiedad.isFav ? "heart.fill" : "heart")
                             .foregroundColor(propiedad.isFav ? Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)) : .black )
