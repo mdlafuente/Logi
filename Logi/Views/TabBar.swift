@@ -17,7 +17,8 @@ enum Tab: Hashable {
 
 struct TabBar: View {
     @State var selectedTab: Tab = .home
-    
+    @EnvironmentObject var settings: UserSettings
+
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
@@ -30,7 +31,7 @@ struct TabBar: View {
                 }.tag(Tab.home)
                 
                 PlacesView(selectedTab: $selectedTab).tabItem {
-                    Image(systemName: "hand.thumbsup.fill")
+                    Image(systemName: "heart.fill")
                     Text("PLACES")
                 }.tag(Tab.places)
                 

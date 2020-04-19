@@ -9,10 +9,46 @@
 import SwiftUI
 import Firebase
 
+func fetchAll(settings: UserSettings) {
+    let db = Firestore.firestore()
+    
+    settings.apartments = [Casa]()
+    settings.propiedades = [Casa]()
+    settings.adventures = [Casa]()
+    
+    db.collection("propiedades").getDocuments() { (querySnapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+        } else {
+            for document in querySnapshot!.documents {
+                var casa = Casa(dictionary: document.data())
+                if settings.favs.contains(where: { (c) -> Bool in
+                    return c.nombre == casa.nombre
+                }){
+                    casa.isFav = true
+                    addCasaToCorrespondingArray(settings: settings, casa: casa)
+                } else {
+                    addCasaToCorrespondingArray(settings: settings, casa: casa)
+                }
+            }
+        }
+    }
+}
+ 
+func addCasaToCorrespondingArray(settings: UserSettings, casa: Casa) {
+     if casa.tipo == "adventure" {
+        settings.adventures.append(casa)
+     } else if casa.tipo == "apartment" {
+        settings.apartments.append(casa)
+     } else {
+        settings.propiedades.append(casa)
+     }
+ }
 
 struct HomeView: View {
     @State var selectedProperty = Casa()
-    @ObservedObject var controller = HomeController()
+    @EnvironmentObject var settings: UserSettings
+    
     
     var body: some View {
         ZStack {
@@ -22,10 +58,10 @@ struct HomeView: View {
             ScrollView {
                 HStack {
                     VStack {
-                        Text("We encourage all members of our comunity to aknowledge the worlds current situation regardin COVID - 19. We ensukjbdkjbakjsbkaj jfjfjd kwos ssjs sos s sososos jsjsjsjs.")
+                        Text("En Logi estamos consientes de la actual situación por la cual el mundo está pasando, son tiempos difíciles en los cuales más que nunca debemos de estar unidos y bien informados, por la misma razón hemos decidido tomar cartas en el asunto. Te invitamos a conocer un poco más sobre esto en www.logi.com/iniciativaCOVID19.")
                             .font(.body)
                             .fontWeight(.light)
-                            .frame(width: 350, height: 150)
+                            .frame(width: 350, height: 200)
                             .padding()
                             .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                             .shadow(radius: 20)
@@ -46,7 +82,7 @@ struct HomeView: View {
                             .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                     }
                     
-                    PropertyList(selectedProperty: $selectedProperty, propiedades: controller.propiedades)
+                    PropertyList(selectedProperty: $selectedProperty, propiedades: settings.propiedades)
                          
                 }
             
@@ -58,7 +94,7 @@ struct HomeView: View {
                         .padding(.init(top: 35, leading: 15, bottom: 5, trailing: 30))
                 }
                 
-                PropertyList(selectedProperty: $selectedProperty, propiedades: controller.adventures)
+                PropertyList(selectedProperty: $selectedProperty, propiedades: settings.adventures)
                     
                 HStack {
                     VStack {
@@ -77,18 +113,15 @@ struct HomeView: View {
                             
                     }
                 }
-                    
-                PropertyList(selectedProperty: $selectedProperty, propiedades: controller.apartments)
+                PropertyList(selectedProperty: $selectedProperty, propiedades: settings.apartments)
             }
             CardDetail(propiedad: $selectedProperty)
                 .offset(y: selectedProperty.precio != -1 ? 0 : screen.height)
-                .animation(.default)
+                .animation(.easeIn)
         }
-    }
-}
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
+        .onAppear(){
+            fetchAll(settings: self.settings)
+        }
     }
 }
 

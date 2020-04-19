@@ -10,6 +10,13 @@ import SwiftUI
 
 class UserSettings: ObservableObject {
     @Published var loggedIn : Bool = false
+    @Published var email = ""
+    @Published var favs = [Casa]()
+    
+    @Published var propiedades = [Casa]()
+    @Published var adventures = [Casa]()
+    @Published var apartments = [Casa]()
+
 }
 
 struct StartView: View {

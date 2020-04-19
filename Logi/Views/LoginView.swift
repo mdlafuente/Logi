@@ -18,6 +18,36 @@ func login(withEmail email: String, password: String, userSettings: UserSettings
         }
         print(user as Any)
         userSettings.loggedIn = true
+        userSettings.email = email
+        fetchFavorites(email: email, userSettings: userSettings)
+    }
+}
+
+func fetchFavorites(email: String, userSettings: UserSettings) {
+    let docRef = Firestore.firestore().collection("favs").document(email)
+    
+    docRef.getDocument { (document, error) in
+        if let document = document, document.exists {
+            let data = document.data()
+            let favs = data!["favs"] as! [DocumentReference]
+            for fav in favs {
+                getFav(docRef: fav, userSettings: userSettings)
+            }
+        } else {
+            print("Document does not exist")
+        }
+    }
+}
+
+func getFav(docRef: DocumentReference, userSettings: UserSettings) {
+    docRef.getDocument { (document, error) in
+        if let document = document, document.exists {
+            var casa = Casa(dictionary: document.data()!)
+            casa.isFav = true
+            userSettings.favs.append(casa)
+        } else {
+            print("Document does not exist")
+        }
     }
 }
 

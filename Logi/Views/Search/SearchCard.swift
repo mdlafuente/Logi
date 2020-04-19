@@ -8,19 +8,13 @@
 
 import SwiftUI
 
-struct SearchCard: View {
-    @State var isFavOn: Bool = true
-    
-    var id = UUID()
-    var image: String
-    var location: String
-    var name: String
-    var capacity: String
+struct SearchCard: View {    
+    @State var propiedad : Casa
     
     var body: some View {
         
         VStack {
-            Image(image)
+            Image(propiedad.imagen)
                 .resizable()
                 .frame(height: 200)
                 .aspectRatio(contentMode: .fit)
@@ -28,15 +22,15 @@ struct SearchCard: View {
             
             HStack {
                 VStack(alignment: .leading){
-                    Text(location)
+                    Text(propiedad.ubicacion)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text(name)
+                    Text(propiedad.nombre)
                         .font(.title)
                         .fontWeight(.black)
                         .foregroundColor(.primary)
                         .lineLimit(3)
-                    Text(capacity)
+                    Text(propiedad.capacidad)
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -44,10 +38,10 @@ struct SearchCard: View {
                 
                 VStack {
                     Button(action: {
-                        self.isFavOn.toggle()
+                        self.propiedad.isFav.toggle()
                     }) {
-                        Image(systemName: isFavOn ? "heart" : "heart.fill")
-                            .foregroundColor(isFavOn ? .black : Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+                        Image(systemName: propiedad.isFav ? "heart.fill" : "heart")
+                            .foregroundColor(propiedad.isFav ? Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)) : .black )
                             .font(.title)
                     }
                 }
@@ -72,10 +66,3 @@ struct SearchCard: View {
         
     }
 }
-struct SearchCard_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchCard(image: "casaSm1", location: "San Miguel de Allende", name: "Casa Román", capacity: "8 - 10 personas")
-        
-    }
-}
-

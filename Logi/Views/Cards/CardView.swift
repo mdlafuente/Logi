@@ -11,9 +11,7 @@ import SwiftUI
 let screen = UIScreen.main.bounds
 
 struct CardView: View {
-    @State var isFavOn: Bool = true
-    
-    var propiedad: Casa
+    @State var propiedad : Casa
     
     var body: some View {
         
@@ -42,10 +40,10 @@ struct CardView: View {
                 
                 VStack {
                     Button(action: {
-                        self.isFavOn.toggle()
+                        self.propiedad.isFav.toggle()
                     }) {
-                        Image(systemName: isFavOn ? "heart" : "heart.fill")
-                            .foregroundColor(isFavOn ? .black : Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+                        Image(systemName: propiedad.isFav ? "heart.fill" : "heart")
+                            .foregroundColor(propiedad.isFav ? Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)) : .black )
                             .font(.title)
                     }
                 }

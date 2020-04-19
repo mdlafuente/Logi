@@ -19,6 +19,7 @@ struct Casa: Identifiable, Hashable {
     var descripcion2: String
     var descripcion3: String
     var imagen: String
+    var isFav: Bool = false
     
     init(dictionary: [String: Any]){
         self.tipo = dictionary["tipo"] as? String ?? "casa"

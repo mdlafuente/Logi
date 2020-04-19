@@ -21,9 +21,11 @@ struct CardDetail: View {
                         Spacer()
                         
                         ZStack{
-                            Image(propiedad.imagen)
-                                .frame(maxWidth: screen.width - 60, maxHeight: 280)
-                                
+                            VStack {
+                                Image(propiedad.imagen)
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(maxWidth: screen.width - 60, maxHeight: screen.height - 280)
+                            }
                             
                             VStack{
                                 Image(systemName: "xmark")
@@ -36,14 +38,15 @@ struct CardDetail: View {
                             .frame(width: 36, height: 36)
                             .background(Color.black)
                             .clipShape(Circle())
-                            .offset(x: 160, y: -80)
+                            .offset(x: 160, y: -100)
                         }
+
                     }
                     Spacer()
                 }
                 .padding(20)
                 .padding(.top, 0)
-                .frame(maxWidth: screen.width, maxHeight: 280)
+                .frame(maxWidth: screen.width, maxHeight: 350)
                 .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                 
@@ -100,5 +103,8 @@ struct CardDetail: View {
         .edgesIgnoringSafeArea(.all)
         .background(BlurView(style: .systemMaterial))
         .edgesIgnoringSafeArea(.bottom)
+        
     }
 }
+
+
